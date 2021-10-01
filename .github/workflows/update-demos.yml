@@ -8,4 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - run: echo "Update demos"
+      - name: Checkout embed
+        uses: actions/checkout@v2
+        with:
+          repository: Typeform/embed
+          path: embed
+
+      - name: Checkout current (embed-demo) repo
+        uses: actions/checkout@v2
+        with:
+          path: embed-demo
+
+      - name: Run ls to see where we are
+        run: ls -a
