@@ -1,0 +1,10 @@
+name: Update Demos
+  repository_dispatch:
+    types: push_master
+
+jobs:
+  generate-typings:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - run: echo "Update demos"
