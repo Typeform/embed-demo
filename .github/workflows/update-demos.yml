@@ -1,6 +1,7 @@
 name: Update Demos
+on:
   repository_dispatch:
-    types: push_master
+    types: update_embed_demos
 
 jobs:
   generate-typings:
