@@ -23,11 +23,10 @@ jobs:
       - name: Run ls to see where we are
         run: ls -a
 
-      - name: Switch to embed-demo
-        run: cd embed-demo
-
       - name: Install deps
+        working-directory: embed-demo
         run: yarn
 
       - name: Run script
+        working-directory: embed-demo
         run: node scripts/deploy-codesandbox.js
