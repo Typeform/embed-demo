@@ -1,5 +1,7 @@
 name: Update Demos
 on:
+  push:
+    branches: [master]
   workflow_dispatch:
   repository_dispatch:
     types: update_embed_demos
@@ -18,15 +20,29 @@ jobs:
       - name: Checkout current (embed-demo) repo
         uses: actions/checkout@v2
         with:
-          path: embed-demo
+          path: demo
 
       - name: Run ls to see where we are
-        run: ls -a
+        run: |
+          pwd
+          ls -la
+          ls -la /home/runner/work/embed-demo/embed-demo
+          ls -la /home/runner/work/embed-demo/embed-demo/embed
+          ls -la /home/runner/work/embed-demo/embed-demo/demo
 
       - name: Install deps
-        working-directory: embed-demo
+        working-directory: demo
         run: yarn
 
-      - name: Run script
-        working-directory: embed-demo
+      - name: Run script to generate demos
+        working-directory: demo
         run: node scripts/deploy-codesandbox.js
+
+      - name: Commit generated demos
+        working-directory: demo
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Github Action"
+          git add .
+          git commit -m "[skip ci] update demos"
+          git push origin master
