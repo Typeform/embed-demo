@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Static HTML Demo</title>
+    <style>
+      .element {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background: red;
+        color: white;
+        padding: 10px;
+        width: 200px;
+        height: 60px;
+        line-height: 40px;
+        z-index: 10000;
+      }
+    </style>
+    <link rel="stylesheet" href="//embed.typeform.com/next/css/popover.css" />
+  </head>
+  <body>
+    <div class="element">I have z-index 10k</div>
+    <p>You can also toggle the popover via this button: <button id="button">toggle</button></p>
+    <hr />
+    <p>
+      You can also toggle the popover with custom icon via this button: <button id="button-custom-icon">toggle</button>
+    </p>
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <script>
+      const { toggle, unmount: basicUnmount } = window.tf.createPopover('moe6aa', {
+        medium: 'demo-test',
+        hidden: {
+          foo: 'foo value',
+          bar: 'bar value',
+        },
+      })
+
+      document.getElementById('button').onclick = toggle
+
+      const toggleCustomIcon = () => {
+        basicUnmount()
+        const { toggle } = window.tf.createPopover('moe6aa', {
+          medium: 'demo-test',
+          hidden: {
+            foo: 'foo value',
+            bar: 'bar value',
+          },
+          customIcon: 'https://images.typeform.com/images/dUMgPyHJHM4B',
+        })
+      }
+
+      document.getElementById('button-custom-icon').onclick = toggleCustomIcon
+    </script>
+  </body>
+</html>

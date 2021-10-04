@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Static HTML Demo</title>
+    <style>
+      #wrapper {
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="wrapper"
+      data-tf-widget="moe6aa"
+      data-tf-source="localhost"
+      data-tf-on-ready="onTypeformReady"
+      data-tf-on-submit="onTypeformSubmit"
+      data-tf-on-question-changed="onTypeformQuestionChanged"
+      data-tf-on-close="onTypeformClose"
+    ></div>
+    <button
+      data-tf-popup="moe6aa"
+      data-tf-source="localhost"
+      data-tf-on-ready="onTypeformReady"
+      data-tf-on-submit="onTypeformSubmit"
+      data-tf-on-question-changed="onTypeformQuestionChanged"
+      data-tf-on-close="onTypeformClose"
+    >
+      open popup
+    </button>
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <script>
+      // customers are often defining callbacks AFTER embedding the form
+      // https://github.com/Typeform/embed/issues/363
+
+      function onTypeformReady(data) {
+        alert('onReady')
+        console.log('form ready', data)
+      }
+
+      function onTypeformSubmit(data) {
+        alert('onSubmit')
+        console.log('form submitted', data)
+      }
+
+      function onTypeformQuestionChanged(data) {
+        alert('onQuestionChanged')
+        console.log('form question changed', data)
+      }
+
+      function onTypeformClose(data) {
+        alert('onClose')
+        console.log('modal window closed', data)
+      }
+    </script>
+  </body>
+</html>

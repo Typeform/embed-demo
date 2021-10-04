@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Static HTML Demo</title>
+    <style>
+      #wrapper {
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+      }
+    </style>
+    <link rel="stylesheet" href="//embed.typeform.com/next/css/slider.css" />
+  </head>
+  <body>
+    <button id="button">toggle right (default)</button>
+    <button id="button-left">toggle left</button>
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <script>
+      const sliderRight = window.tf.createSlider('moe6aa', { medium: 'demo-test' })
+      document.getElementById('button').onclick = function () {
+        sliderRight.toggle()
+      }
+
+      const sliderleft = window.tf.createSlider('moe6aa', { medium: 'demo-test' })
+      document.getElementById('button-left').onclick = function () {
+        sliderleft.toggle()
+      }
+    </script>
+  </body>
+</html>
