@@ -1,7 +1,7 @@
 name: Update Demos
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
   repository_dispatch:
     types: update_embed_demos
@@ -45,4 +45,4 @@ jobs:
           git config --global user.name "Github Action"
           git add .
           git commit -m "[skip ci] update demos"
-          git push origin master
+          git push origin main
