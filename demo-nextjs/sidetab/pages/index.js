@@ -20,7 +20,12 @@ export default function SidetabPage({ id = 'moe6aa' }) {
           Embed sidetab &lt;3 Next.js <Sparkle />
         </p>
 
-        <Sidetab id={id} medium="demo-test" hidden={{ foo: 'foo value', bar: 'bar value' }} buttonText="open sidetab" />
+        <Sidetab
+          id={id}
+          medium="demo-test"
+          hidden={{ foo: 'foo value', bar: 'bar value' }}
+          buttonText="open sidetab"
+        />
       </main>
     </div>
   )
