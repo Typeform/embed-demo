@@ -6,15 +6,12 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
     branches:
-      - main 
-  
+      - main
+
 
 jobs:
   ci-standard-checks:
-    # for private repositories
     runs-on: [self-hosted, automated-checks]
-    # for public repositories
-    # runs-on: [ubuntu-latest]
 
     steps:
       - name: Check Out Source Code
@@ -26,5 +23,3 @@ jobs:
         uses: Typeform/ci-standard-checks@v1
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          dockerUsername: ${{ secrets.DOCKER_USERNAME }}
-          dockerPassword: ${{ secrets.DOCKER_PASSWORD }}
