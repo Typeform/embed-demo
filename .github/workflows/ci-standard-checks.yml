@@ -11,7 +11,7 @@ on:
 
 jobs:
   ci-standard-checks:
-    runs-on: [self-hosted, automated-checks]
+    runs-on: [ubuntu-latest]
 
     steps:
       - name: Check Out Source Code
