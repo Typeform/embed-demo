@@ -15,12 +15,19 @@
   <body>
     <h1>Sandbox Typefom</h1>
     <p>Submissions are disabled for this form.</p>
-    <div id="wrapper" data-tf-widget="HLjqXS5W" data-tf-enable-sandbox data-tf-on-submit="handleSubmit"></div>
+    <div
+      id="wrapper"
+      data-tf-widget="HLjqXS5W"
+      data-tf-enable-sandbox
+      data-tf-on-submit="handleSubmit"
+    ></div>
     <script src="//embed.typeform.com/next/embed.js"></script>
     <script>
       function handleSubmit() {
         console.log('----- SUBMIT -----')
-        console.log("form was not actually submitted thanks to 'data-tf-enable-sandbox'")
+        console.log(
+          "form was not actually submitted thanks to 'data-tf-enable-sandbox'"
+        )
         console.log('submit event fired for compatibility reasons')
       }
     </script>

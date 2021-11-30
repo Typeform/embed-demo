@@ -31,13 +31,23 @@ export default function Slider({ id = 'moe6aa' }) {
         </p>
 
         <p>
-          <SliderButton id={id} style={buttonStyle} medium="demo-test" hidden={{ foo: 'foo value', bar: 'bar value' }}>
+          <SliderButton
+            id={id}
+            style={buttonStyle}
+            medium="demo-test"
+            hidden={{ foo: 'foo value', bar: 'bar value' }}
+          >
             open slider (right)
           </SliderButton>
         </p>
 
         <p>
-          <SliderButton id="HLjqXS5W" position="left" width="400" style={buttonStyle}>
+          <SliderButton
+            id="HLjqXS5W"
+            position="left"
+            width="400"
+            style={buttonStyle}
+          >
             open slider (small from left)
           </SliderButton>
         </p>

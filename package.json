@@ -8,5 +8,24 @@
   "dependencies": {
     "fs-extra": "^10.0.0",
     "replace-in-files": "^3.0.0"
+  },
+  "devDependencies": {
+    "@typeform/eslint-config": "^4.1.0",
+    "eslint": "^7.16.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.5.0"
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "prettier": "@typeform/eslint-config/prettier",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint --fix . && prettier --write .",
+    "deploy": "node scripts/deploy-codesandbox.js"
   }
 }
