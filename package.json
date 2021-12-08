@@ -10,7 +10,7 @@
     "replace-in-files": "^3.0.0"
   },
   "devDependencies": {
-    "@typeform/eslint-config": "^4.1.0",
+    "@typeform/eslint-config": "^3.0.2",
     "eslint": "^7.16.0",
     "husky": ">=6",
     "lint-staged": ">=10",
