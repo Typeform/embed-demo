@@ -22,9 +22,7 @@
     <div class="column">
       <h1>Async widget</h1>
       <div id="wrapper">
-        <p>
-          We will inject embed code here 3 seconds after the page has loaded.
-        </p>
+        <p>We will inject embed code here 3 seconds after the page has loaded.</p>
         <p>Click the buttons below when this text is gone.</p>
       </div>
       <p></p>
@@ -34,22 +32,14 @@
       <div data-tf-widget="HLjqXS5W" class="form"></div>
     </div>
     <div style="clear: both"></div>
-    <p>
-      Use the buttons below when new widget is injected into the left column.
-    </p>
-    <p>
-      Load new embeds only: <button onClick="window.tf.load()">load</button>
-    </p>
-    <p>
-      Reload all embeds in the page:
-      <button onClick="window.tf.reload()">reload</button>
-    </p>
+    <p>Use the buttons below when new widget is injected into the left column.</p>
+    <p>Load new embeds only: <button onClick="window.tf.load()">load</button></p>
+    <p>Reload all embeds in the page: <button onClick="window.tf.reload()">reload</button></p>
 
     <script>
       window.onload = () => {
         setTimeout(() => {
-          document.querySelector('#wrapper').innerHTML =
-            '<div data-tf-widget="HLjqXS5W" class="form"></div>'
+          document.querySelector('#wrapper').innerHTML = '<div data-tf-widget="HLjqXS5W" class="form"></div>'
         }, 3000)
       }
     </script>

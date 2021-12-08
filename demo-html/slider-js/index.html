@@ -18,16 +18,12 @@
     <button id="button-left">toggle left</button>
     <script src="//embed.typeform.com/next/embed.js"></script>
     <script>
-      const sliderRight = window.tf.createSlider('HLjqXS5W', {
-        medium: 'demo-test',
-      })
+      const sliderRight = window.tf.createSlider('HLjqXS5W', { medium: 'demo-test' })
       document.getElementById('button').onclick = function () {
         sliderRight.toggle()
       }
 
-      const sliderleft = window.tf.createSlider('HLjqXS5W', {
-        medium: 'demo-test',
-      })
+      const sliderleft = window.tf.createSlider('HLjqXS5W', { medium: 'demo-test' })
       document.getElementById('button-left').onclick = function () {
         sliderleft.toggle()
       }

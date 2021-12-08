@@ -15,28 +15,20 @@
   </head>
   <body>
     <h1>This page will inject embed code client-side with JS</h1>
-    <p>
-      This embed code is inserted before the JS lib is loaded and will load
-      automatically.
-    </p>
+    <p>This embed code is inserted before the JS lib is loaded and will load automatically.</p>
     <div id="content"></div>
     <p>
-      Embed code here is inserted later, after the JS lib is loaded and needs to
-      be loaded manually via
+      Embed code here is inserted later, after the JS lib is loaded and needs to be loaded manually via
       <code>window.tf.load()</code>.
     </p>
     <div id="more-content"></div>
     <script>
       // add snippet
       const contentElm = document.querySelector('#content')
-      contentElm.innerHTML =
-        '<div id="wrapper" data-tf-widget="HLjqXS5W"></div>'
+      contentElm.innerHTML = '<div id="wrapper" data-tf-widget="HLjqXS5W"></div>'
 
       setTimeout(() => {
-        console.log(
-          'Is document already loaded?',
-          document.readyState === 'complete' ? 'YES' : 'NO'
-        )
+        console.log('Is document already loaded?', document.readyState === 'complete' ? 'YES' : 'NO')
         console.log('document.readyState =', document.readyState)
 
         // add script (we can not add scripts via innerHTML)
