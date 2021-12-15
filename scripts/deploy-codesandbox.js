@@ -116,7 +116,7 @@ const buildDemoNext = async (dir) => {
       start: 'next start',
     },
     dependencies: {
-      'next': '11.1.1',
+      'next': '11.1.3',
       'react': '^16.8.0',
       'react-dom': '^16.8.0',
       '@typeform/embed': '^1.10.0',

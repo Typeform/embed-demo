@@ -40,7 +40,7 @@ jobs:
 
       - name: Check if there are any changes
         id: check-for-changes
-        working-directory: content
+        working-directory: demo
         run: |
           echo "::set-output name=no_changes::$(git status | grep -c "nothing to commit")"
 
