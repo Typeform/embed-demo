@@ -38,7 +38,14 @@ jobs:
         working-directory: demo
         run: node scripts/deploy-codesandbox.js
 
+      - name: Check if there are any changes
+        id: check-for-changes
+        working-directory: content
+        run: |
+          echo "::set-output name=no_changes::$(git status | grep -c "nothing to commit")"
+
       - name: Commit generated demos
+        if: steps.check-for-changes.outputs.no_changes == 0
         working-directory: demo
         run: |
           git config --global user.email "you@example.com"
