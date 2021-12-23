@@ -20,7 +20,7 @@
     "*.{js,md}": [
       "prettier --write"
     ],
-    "*.{js}": [
+    "*.js": [
       "eslint --fix"
     ]
   },

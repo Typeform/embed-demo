@@ -22,26 +22,22 @@ jobs:
         with:
           path: demo
 
-      - name: Run ls to see where we are
-        run: |
-          pwd
-          ls -la
-          ls -la /home/runner/work/embed-demo/embed-demo
-          ls -la /home/runner/work/embed-demo/embed-demo/embed
-          ls -la /home/runner/work/embed-demo/embed-demo/demo
-
       - name: Install deps
         working-directory: demo
         run: yarn
 
       - name: Run script to generate demos
         working-directory: demo
-        run: node scripts/deploy-codesandbox.js
+        run: |
+          yarn deploy
+          yarn lint
 
       - name: Check if there are any changes
         id: check-for-changes
         working-directory: demo
         run: |
+          git status
+          echo "name=no_changes::$(git status | grep -c "nothing to commit")"
           echo "::set-output name=no_changes::$(git status | grep -c "nothing to commit")"
 
       - name: Commit generated demos
