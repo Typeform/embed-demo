@@ -42,4 +42,4 @@ Demos for [@typeform/embed](https://github.com/Typeform/embed).
 
 ## Dev notes
 
-Do not edit this README file or any of the `demo-` directories manually. They are generated automatically by [github action](https://github.com/Typeform/embed-demo/blob/main/.github/workflows/update-demos.yml) using [`yarn deploy` script](https://github.com/Typeform/embed-demo/blob/main/scripts/deploy-codesandbox.js).
+Do not edit this README file or any of the `demo-` directories manually. They are generated automatically by [github action](https://github.com/Typeform/embed-demo/blob/main/.github/workflows/update-demos.yml) using node script from `scripts/`.
