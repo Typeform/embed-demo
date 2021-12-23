@@ -22,20 +22,27 @@
   </head>
   <body>
     <div class="element">I have z-index 10k</div>
-    <p>You can also toggle the popover via this button: <button id="button">toggle</button></p>
+    <p>
+      You can also toggle the popover via this button:
+      <button id="button">toggle</button>
+    </p>
     <hr />
     <p>
-      You can also toggle the popover with custom icon via this button: <button id="button-custom-icon">toggle</button>
+      You can also toggle the popover with custom icon via this button:
+      <button id="button-custom-icon">toggle</button>
     </p>
     <script src="//embed.typeform.com/next/embed.js"></script>
     <script>
-      const { toggle, unmount: basicUnmount } = window.tf.createPopover('HLjqXS5W', {
-        medium: 'demo-test',
-        hidden: {
-          foo: 'foo value',
-          bar: 'bar value',
-        },
-      })
+      const { toggle, unmount: basicUnmount } = window.tf.createPopover(
+        'HLjqXS5W',
+        {
+          medium: 'demo-test',
+          hidden: {
+            foo: 'foo value',
+            bar: 'bar value',
+          },
+        }
+      )
 
       document.getElementById('button').onclick = toggle
 
