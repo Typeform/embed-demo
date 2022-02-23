@@ -26,11 +26,12 @@ Demos for [@typeform/embed](https://github.com/Typeform/embed).
 20. [slider-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/slider-js)
 21. [time-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/time-html)
 22. [time-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/time-js)
-23. [widget-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-html)
-24. [widget-inline](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-inline)
-25. [widget-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-js)
-26. [widget-lazy-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-lazy-html)
-27. [widget-sandbox](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-sandbox)
+23. [widget-autoresize](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-autoresize)
+24. [widget-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-html)
+25. [widget-inline](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-inline)
+26. [widget-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-js)
+27. [widget-lazy-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-lazy-html)
+28. [widget-sandbox](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-sandbox)
 
 ## React (NextJS)
 
