@@ -32,6 +32,7 @@ Demos for [@typeform/embed](https://github.com/Typeform/embed).
 26. [widget-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-js)
 27. [widget-lazy-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-lazy-html)
 28. [widget-sandbox](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-sandbox)
+29. [widget-theme](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-theme)
 
 ## React (NextJS)
 
