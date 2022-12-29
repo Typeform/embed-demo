@@ -55,7 +55,7 @@ const buildDemoHtml = async (dir) => {
 
   await replaceInFiles({
     files: filesGlob,
-    from: /\.+\/lib\/embed-next\.js/g,
+    from: /\.+\/lib\/embed\.js/g,
     to: '//embed.typeform.com/next/embed.js',
   })
 
