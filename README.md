@@ -40,11 +40,12 @@ Demos for [@typeform/embed](https://github.com/Typeform/embed).
 
 ## React (NextJS)
 
-1. [widget](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/widget)
-2. [popover](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/popover)
-3. [popup](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/popup)
-4. [sidetab](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/sidetab)
-5. [slider](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/slider)
+1. [forward-ref](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/forward-ref)
+2. [widget](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/widget)
+3. [popover](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/popover)
+4. [popup](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/popup)
+5. [sidetab](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/sidetab)
+6. [slider](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs/slider)
 
 ## Dev notes
 
