@@ -1,3 +1,4 @@
+import { createRef } from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import { SliderButton } from '@typeform/embed-react'
@@ -5,6 +6,8 @@ import { SliderButton } from '@typeform/embed-react'
 import Sparkle from '../components/sparkle'
 
 export default function Slider({ id = 'moe6aa' }) {
+  const sliderRef = createRef()
+
   const buttonStyle = {
     padding: '10px 20px',
     borderRadius: 4,
@@ -33,6 +36,7 @@ export default function Slider({ id = 'moe6aa' }) {
         <p>
           <SliderButton
             id={id}
+            ref={sliderRef}
             style={buttonStyle}
             medium="demo-test"
             hidden={{ foo: 'foo value', bar: 'bar value' }}
@@ -50,6 +54,12 @@ export default function Slider({ id = 'moe6aa' }) {
           >
             open slider (small from left)
           </SliderButton>
+        </p>
+
+        <p>
+          Or you can{' '}
+          <button onClick={() => sliderRef.current?.open()}>click here</button>{' '}
+          to open the <strong>slider (right)</strong> programmatically via ref.
         </p>
       </main>
     </div>

@@ -1,3 +1,4 @@
+import { createRef } from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import { Sidetab } from '@typeform/embed-react'
@@ -5,6 +6,8 @@ import { Sidetab } from '@typeform/embed-react'
 import Sparkle from '../components/sparkle'
 
 export default function SidetabPage({ id = 'moe6aa' }) {
+  const sidetabRef = createRef()
+
   return (
     <div>
       <Head>
@@ -22,10 +25,16 @@ export default function SidetabPage({ id = 'moe6aa' }) {
 
         <Sidetab
           id={id}
+          ref={sidetabRef}
           medium="demo-test"
           hidden={{ foo: 'foo value', bar: 'bar value' }}
           buttonText="open sidetab"
         />
+
+        <p>
+          <button onClick={() => sidetabRef.current?.open()}>Click here</button>{' '}
+          to open the sidetab programmatically via ref.
+        </p>
       </main>
     </div>
   )
