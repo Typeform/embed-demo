@@ -6,7 +6,7 @@
   "author": "Max Prilutskiy <maks.prilutskiy@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^10.1.0",
     "replace-in-files": "^3.0.0"
   },
   "devDependencies": {
