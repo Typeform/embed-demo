@@ -1,5 +1,7 @@
 {
   "name": "client-side",
+  "license": "MIT",
+  "description": "Embed SDK Demo - client-side",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

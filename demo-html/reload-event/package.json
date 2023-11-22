@@ -1,5 +1,7 @@
 {
   "name": "reload-event",
+  "license": "MIT",
+  "description": "Embed SDK Demo - reload-event",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

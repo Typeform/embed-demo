@@ -1,5 +1,7 @@
 {
   "name": "scroll-html",
+  "license": "MIT",
+  "description": "Embed SDK Demo - scroll-html",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

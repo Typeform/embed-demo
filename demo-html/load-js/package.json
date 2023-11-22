@@ -1,5 +1,7 @@
 {
   "name": "load-js",
+  "license": "MIT",
+  "description": "Embed SDK Demo - load-js",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

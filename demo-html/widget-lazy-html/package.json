@@ -1,5 +1,7 @@
 {
   "name": "widget-lazy-html",
+  "license": "MIT",
+  "description": "Embed SDK Demo - widget-lazy-html",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

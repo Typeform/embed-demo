@@ -1,5 +1,7 @@
 {
   "name": "transitive-params-html",
+  "license": "MIT",
+  "description": "Embed SDK Demo - transitive-params-html",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

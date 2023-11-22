@@ -1,5 +1,7 @@
 {
   "name": "load-html",
+  "license": "MIT",
+  "description": "Embed SDK Demo - load-html",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

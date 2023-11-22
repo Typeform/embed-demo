@@ -1,5 +1,7 @@
 {
   "name": "sidetab-customized-html",
+  "license": "MIT",
+  "description": "Embed SDK Demo - sidetab-customized-html",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

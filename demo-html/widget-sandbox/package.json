@@ -1,5 +1,7 @@
 {
   "name": "widget-sandbox",
+  "license": "MIT",
+  "description": "Embed SDK Demo - widget-sandbox",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {

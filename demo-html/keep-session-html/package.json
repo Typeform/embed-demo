@@ -1,5 +1,7 @@
 {
   "name": "keep-session-html",
+  "license": "MIT",
+  "description": "Embed SDK Demo - keep-session-html",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
