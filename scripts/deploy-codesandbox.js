@@ -81,6 +81,8 @@ const buildDemoHtml = async (dir) => {
 
     const json = {
       name: dirName,
+      license: 'MIT',
+      description: `Embed SDK Demo - ${dirName}`,
       version: '1.0.0',
       main: 'index.html',
       scripts: {
@@ -106,26 +108,6 @@ const buildDemoNext = async (dir) => {
   const pagesDir = path.join(dir, 'pages')
   const pagesToIgnore = ['_app.js', 'vanilla.js']
 
-  const json = {
-    name: 'nextjs',
-    version: '1.0.0',
-    scripts: {
-      dev: 'next',
-      build: 'next build',
-      start: 'next start',
-    },
-    dependencies: {
-      'next': '11.1.3',
-      'react': '^16.8.0',
-      'react-dom': '^16.8.0',
-      '@typeform/embed': '^1.10.0',
-      '@typeform/embed-react': '^1.0.3',
-      'prop-types': '^15.7.2',
-    },
-    license: 'MIT',
-    description: 'NextJS',
-  }
-
   const demoNames = []
 
   fs.readdirSync(pagesDir)
@@ -148,6 +130,27 @@ const buildDemoNext = async (dir) => {
         path.join(finalDir, 'pages', 'index.js')
       )
       fse.copySync(path.join(dir, 'styles'), path.join(finalDir, 'styles'))
+
+      const json = {
+        name: `${dirName}-nextjs`,
+        license: 'MIT',
+        description: `Embed SDK Demo - ${dirName} NextJS`,
+        version: '1.0.0',
+        scripts: {
+          dev: 'next',
+          build: 'next build',
+          start: 'next start',
+        },
+        dependencies: {
+          '@typeform/embed': '^4.3.2',
+          '@typeform/embed-react': '^3.8.0',
+          'next': '14.0.3',
+          'prop-types': '^15.8.1',
+          'react': '^18.2.0',
+          'react-dom': '^18.2.0',
+        },
+      }
+
       fse.writeJsonSync(path.join(finalDir, 'package.json'), json)
     })
 
