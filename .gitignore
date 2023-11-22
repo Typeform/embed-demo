@@ -1,2 +1,4 @@
 node_modules/
 .idea/
+.next/
+demo-*/**/yarn.lock
