@@ -1,3 +1,4 @@
+<a href=https://engineering-metrics.typeform.tf/standards-adoption-tool/reports/embed-demo/><img src=https://api.typeform.com/repositories/embed-demo/badges.svg /></a>
 # CodeSandbox demos
 
 Demos for [@typeform/embed](https://github.com/Typeform/embed).
