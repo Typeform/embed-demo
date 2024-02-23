@@ -1,7 +1,7 @@
 {
-  "name": "prevent-reopen-on-close-js",
+  "name": "respect-js",
   "license": "MIT",
-  "description": "Embed SDK Demo - prevent-reopen-on-close-js",
+  "description": "Embed SDK Demo - respect-js",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
