@@ -11,7 +11,7 @@
   "dependencies": {
     "@typeform/embed": "^4.3.2",
     "@typeform/embed-react": "^3.8.0",
-    "next": "14.0.4",
+    "next": "14.2.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
