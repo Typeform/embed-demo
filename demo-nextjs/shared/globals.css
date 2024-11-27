@@ -1,0 +1,27 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  border-top: 1px #aaa solid;
+  border-bottom: 1px #aaa solid;
+  padding: 10px 0;
+  margin: 16px 0;
+}
+
+.menu a {
+  display: inline-block;
+  margin: 0 10px;
+}

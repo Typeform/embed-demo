@@ -24,14 +24,19 @@
         z-index: 10000;
       }
     </style>
+    <link rel="stylesheet" href="//embed.typeform.com/next/css/widget.css" />
   </head>
   <body>
     <div class="element">I have z-index 10k</div>
-    <div
-      id="wrapper"
-      data-tf-live="01J5X1H8WM5CSXVDN89WXNX5EB"
-      data-tf-hidden="email=foo@bar.com"
-    ></div>
+    <div id="wrapper"></div>
     <script src="//embed.typeform.com/next/embed.js"></script>
+    <script>
+      window.tf.createWidget('pfnUIIso', {
+        container: document.getElementById('wrapper'),
+        onDuplicateDetected: ({ formId }) => {
+          console.log(`Form ${formId} is already answered`)
+        },
+      })
+    </script>
   </body>
 </html>
