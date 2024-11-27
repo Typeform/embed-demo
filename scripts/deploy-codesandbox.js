@@ -25,16 +25,13 @@ const destDemoNextDir = path.resolve(thisRepoRootDir, demoNextDirName)
 
 const readmeFilePath = path.resolve(thisRepoRootDir, 'README.md')
 
-const removeUnusedFiles = (dir) => {
-  const files = [
-    'package.json',
-    'node_modules',
-    'README.md',
-    'CHANGELOG.md',
-    'yarn.lock',
-    '.next',
-    'public/lib',
-  ]
+const removeUnusedFilesHtml = (dir) => {
+  const files = ['package.json', 'README.md', 'CHANGELOG.md', 'public/lib']
+  files.forEach((file) => fse.removeSync(path.join(dir, file)))
+}
+
+const removeUnusedFilesNextJs = (dir) => {
+  const files = ['node_modules', 'README.md', 'CHANGELOG.md', '.next', 'public']
   files.forEach((file) => fse.removeSync(path.join(dir, file)))
 }
 
@@ -104,73 +101,7 @@ const buildDemoHtml = async (dir) => {
   return demoNames
 }
 
-const buildDemoNext = async (dir) => {
-  const pagesDir = path.join(dir, 'pages')
-  const pagesToIgnore = ['_app.js', 'vanilla.js']
-
-  const demoNames = []
-
-  fs.readdirSync(pagesDir)
-    .filter((page) => !pagesToIgnore.includes(page))
-    .forEach((filename) => {
-      const overwrittenFilename =
-        filename === 'index.js' ? 'widget.js' : filename
-      const dirName = path.parse(overwrittenFilename).name
-      const finalDir = path.join(dir, dirName)
-
-      demoNames.push(dirName)
-
-      fse.ensureDirSync(finalDir)
-      fse.copySync(
-        path.join(dir, 'components'),
-        path.join(finalDir, 'components')
-      )
-      fse.copySync(
-        path.join(dir, 'pages', filename),
-        path.join(finalDir, 'pages', 'index.js')
-      )
-      fse.copySync(path.join(dir, 'styles'), path.join(finalDir, 'styles'))
-
-      const json = {
-        name: `${dirName}-nextjs`,
-        license: 'MIT',
-        description: `Embed SDK Demo - ${dirName} NextJS`,
-        version: '1.0.0',
-        scripts: {
-          dev: 'next',
-          build: 'next build',
-          start: 'next start',
-        },
-        dependencies: {
-          '@typeform/embed': '^4.3.2',
-          '@typeform/embed-react': '^3.8.0',
-          'next': '14.0.4',
-          'prop-types': '^15.8.1',
-          'react': '^18.2.0',
-          'react-dom': '^18.2.0',
-        },
-      }
-
-      fse.writeJsonSync(path.join(finalDir, 'package.json'), json)
-    })
-
-  const filesGlob = './**/index.js'
-
-  await replaceInFiles({
-    files: filesGlob,
-    from: '{ id }',
-    to: `{ id = 'moe6aa' }`,
-  })
-
-  fse.removeSync(path.join(dir, 'components'))
-  fse.removeSync(path.join(dir, 'pages'))
-  fse.removeSync(path.join(dir, 'styles'))
-  fse.removeSync(path.join(dir, 'public'))
-
-  return demoNames
-}
-
-const writeReadmeFile = (demoHtmlNames, demoNextNames) => {
+const writeReadmeFile = (demoHtmlNames) => {
   fse.removeSync(readmeFilePath)
 
   fs.writeFileSync(
@@ -192,14 +123,7 @@ ${demoHtmlNames
 
 ## React (NextJS)
 
-${demoNextNames
-  .map(
-    (name, index) =>
-      `${
-        index + 1
-      }. [${name}](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/${demoNextDirName}/${name})`
-  )
-  .join('\n')}
+[React app](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-nextjs)
 
 ## Dev notes
 
@@ -220,14 +144,12 @@ async function main() {
 
   process.chdir(thisRepoRootDir)
 
-  removeUnusedFiles(destDemoHtmlDir)
-  removeUnusedFiles(destDemoNextDir)
+  removeUnusedFilesHtml(destDemoHtmlDir)
+  removeUnusedFilesNextJs(destDemoNextDir)
 
   const demoHtmlNames = await buildDemoHtml(destDemoHtmlPublicDir)
 
-  const demoNextNames = await buildDemoNext(destDemoNextDir)
-
-  writeReadmeFile(demoHtmlNames, demoNextNames)
+  writeReadmeFile(demoHtmlNames)
 }
 
 main()
