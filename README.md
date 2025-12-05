@@ -41,8 +41,10 @@ Demos for [@typeform/embed](https://github.com/Typeform/embed).
 35. [widget-inline](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-inline)
 36. [widget-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-js)
 37. [widget-lazy-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-lazy-html)
-38. [widget-sandbox](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-sandbox)
-39. [widget-theme](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-theme)
+38. [widget-newui-html](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-newui-html)
+39. [widget-newui-js](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-newui-js)
+40. [widget-sandbox](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-sandbox)
+41. [widget-theme](https://codesandbox.io/s/github/Typeform/embed-demo/tree/main/demo-html/widget-theme)
 
 ## React (NextJS)
 
