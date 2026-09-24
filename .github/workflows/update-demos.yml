@@ -23,7 +23,7 @@ jobs:
           path: demo
           ref: main
           persist-credentials: false
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.JENKINS_PAT_TOKEN }}
 
       - name: Install deps
         working-directory: demo
@@ -53,4 +53,4 @@ jobs:
           git commit -m "[skip ci] update demos"
           git push https://$GITHUB_TOKEN@github.com/Typeform/embed-demo.git
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.JENKINS_PAT_TOKEN }}
